@@ -1,8 +1,8 @@
 <template>
     <div>
-        Index
+        show
     </div>
-    <Link href="/hello">Show Page</Link>
+    <Link href="/">Index Page</Link>
 </template>
 
 <script setup>
