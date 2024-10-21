@@ -1,11 +1,16 @@
 <template>
-    Hello {{ message }}
-    Count: {{ counter }}
+    <div>Index</div>
+    <Link href="/hello">Show Page</Link>
+    <div>
+        The message is: {{ message }}
+    </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-const message = ref('Hello Vue 3');
-const counter = ref(0);
-setInterval(() => counter.value++, 1000);
+import { Link } from '@inertiajs/vue3'
+
+// Props are One-Way data flow === readonly
+defineProps({
+    message: String // good practice to define the type
+})
 </script>
