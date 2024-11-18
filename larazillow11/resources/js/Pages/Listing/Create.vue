@@ -49,12 +49,11 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
-import { Inertia } from '@inertiajs/inertia';
+import { useForm } from '@inertiajs/inertia-vue3';
 // hold the data from the form
 // ref for primitive types ie string, number, boolean
 // reactive for objects
-const form = reactive({
+const form = useForm({
     beds: 0,
     baths: 0,
     area: 0,
@@ -65,7 +64,7 @@ const form = reactive({
     price: 0,
 })
 
-const create = () => Inertia.post('/listing', form);
+const create = () => form.post('/listing');
 </script>
 
 <style scoped>
