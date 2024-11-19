@@ -14,7 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         // passing some data from a Laravel app to those Inertia.js views
         $middleware->web(append: [
-            HandleInertiaRequests::class,
+            HandleInertiaRequests::class, // need to be the last middleware
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

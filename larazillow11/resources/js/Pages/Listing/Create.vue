@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-import { useForm } from '@inertiajs/inertia-vue3';
+import { useForm } from '@inertiajs/vue3';
 // hold the data from the form
 // ref for primitive types ie string, number, boolean
 // reactive for objects
