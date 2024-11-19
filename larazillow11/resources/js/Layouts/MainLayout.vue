@@ -2,20 +2,18 @@
     <Link href="/">Main Page</Link>&nbsp;
     <Link href="/hello">Show Page</Link>
     <!-- showing flash message that will be destroyed when a subsequence request -->
-    <div v-if="page.props.flash.success" class="success">
-        {{ page.props.flash.success }}
+    <div v-if="flashSuccess" class="success">
+        {{ flashSuccess }}
     </div>
     <!-- default keyword flag -->
     <slot>Default</slot>
 </template>
 
 <script setup>
+import { ref, computed } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3'
-// debugging -page.props.value.flash.success- as page not render
-// page
-// page.props
-// page.props.value >> no data
 const page = usePage()
+const flashSuccess = computed(() => page.props.flash.success)
 </script>
 
 <style scoped>
