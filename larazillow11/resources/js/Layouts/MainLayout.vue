@@ -1,6 +1,6 @@
 <template>
-    <Link href="/">Main Page</Link>&nbsp;
-    <Link href="/hello">Show Page</Link>
+    <Link href="/listing">Listings</Link>&nbsp;
+    <Link href="/listing/create">New Listing</Link>
     <!-- showing flash message that will be destroyed when a subsequence request -->
     <div v-if="flashSuccess" class="success">
         {{ flashSuccess }}
