@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-
+    @routes
     {{-- insert the link to the bundled compiled file that is being bundles by Vite --}}
     @vite('resources/js/app.js')
     {{-- add all link that Inertia require --}}
